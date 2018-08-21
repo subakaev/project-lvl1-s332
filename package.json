@@ -1,8 +1,9 @@
 {
   "name": "brain-games-s332",
-  "version": "1.0.1",
-  "description": "",
-  "main": "src/bin/brain-games.js",
+  "version": "1.0.2",
+  "description": "The Brain Games Project. This is the first project from hexlet js-backend course.",
+  "author": "Sergey Bakaev",
+  "license": "ISC",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
   },
@@ -18,8 +19,6 @@
     "type": "git",
     "url": "git+https://github.com/subakaev/project-lvl1-s332.git"
   },
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/subakaev/project-lvl1-s332/issues"
   },
