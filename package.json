@@ -1,11 +1,12 @@
 {
   "name": "brain-games-s332",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "The Brain Games Project. This is the first project from hexlet js-backend course.",
   "author": "Sergey Bakaev",
   "license": "ISC",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js"
   },
   "files": [
     "dist"
