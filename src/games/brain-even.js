@@ -1,51 +1,12 @@
-import readlineSync from 'readline-sync';
+import { cons } from 'hexlet-pairs';
 
-import getName from '..';
+import { getRandomInt, isEven } from '../utils';
+import startGame from '../game-engine';
 
-const numberOfQuestions = 3;
+const playStepGenerator = () => {
+  const question = getRandomInt();
 
-const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-
-const isEven = number => number % 2 === 0;
-
-const getCorrectAnswer = question => (isEven(question) ? 'yes' : 'no');
-
-const playGame = () => {
-  const playingStep = (counter) => {
-    if (counter >= numberOfQuestions) {
-      return true;
-    }
-
-    const question = getRandomInt(0, 99);
-
-    console.log(`Question: ${question}`);
-
-    const answer = readlineSync.question('Your answer: ');
-    const correctAnswer = getCorrectAnswer(question);
-
-    if (answer !== correctAnswer) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      return false;
-    }
-
-    console.log('Correct!');
-
-    return playingStep(counter + 1);
-  };
-
-  return playingStep(0);
+  return cons(question, isEven(question) ? 'yes' : 'no');
 };
 
-export default () => {
-  const name = getName();
-
-  console.log('\nAnswer "yes" if number even otherwise answer "no".\n');
-
-  const gameResult = playGame();
-
-  if (gameResult) {
-    console.log(`\nCongratulations, ${name}!`);
-  } else {
-    console.log(`\nLet's try again, ${name}!`);
-  }
-};
+export default () => startGame('Answer "yes" if number even otherwise answer "no".', playStepGenerator);
