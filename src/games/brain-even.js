@@ -1,22 +1,27 @@
-import getName from '..';
 import readlineSync from 'readline-sync';
+
+import getName from '..';
+
+const numberOfQuestions = 3;
 
 const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
-const getCorrectAnswer = number => (number % 2 === 0 ? 'yes' : 'no');
+const isEven = number => number % 2 === 0;
+
+const getCorrectAnswer = question => (isEven(question) ? 'yes' : 'no');
 
 const playGame = () => {
   const playingStep = (counter) => {
-    if (counter >= 3) {
+    if (counter >= numberOfQuestions) {
       return true;
     }
 
-    const number = getRandomInt(0, 99);
+    const question = getRandomInt(0, 99);
 
-    console.log(`Question: ${number}`);
+    console.log(`Question: ${question}`);
 
     const answer = readlineSync.question('Your answer: ');
-    const correctAnswer = getCorrectAnswer(number);
+    const correctAnswer = getCorrectAnswer(question);
 
     if (answer !== correctAnswer) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
@@ -36,7 +41,7 @@ export default () => {
 
   console.log('\nAnswer "yes" if number even otherwise answer "no".\n');
 
-  const gameResult = playGame(name);
+  const gameResult = playGame();
 
   if (gameResult) {
     console.log(`\nCongratulations, ${name}!`);
