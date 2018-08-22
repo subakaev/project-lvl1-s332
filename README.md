@@ -3,5 +3,11 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/13f1eda36fbcaaa3f459/test_coverage)](https://codeclimate.com/github/subakaev/project-lvl1-s332/test_coverage)
 [![Build Status](https://travis-ci.org/subakaev/project-lvl1-s332.svg?branch=master)](https://travis-ci.org/subakaev/project-lvl1-s332)
 
-## Demo
-[![asciicast](https://asciinema.org/a/Ess7sLeGo9osE5CQL2AjW90fQ.png)](https://asciinema.org/a/Ess7sLeGo9osE5CQL2AjW90fQ)
+## Installation demo
+[![asciicast](https://asciinema.org/a/kt6tcAXG1wAxQHaC8rSfSiRB8.png)](https://asciinema.org/a/kt6tcAXG1wAxQHaC8rSfSiRB8)
+
+## Brain-even game demo
+[![asciicast](https://asciinema.org/a/yetno2MmYQKXTfDfnMIkzbIPB.png)](https://asciinema.org/a/yetno2MmYQKXTfDfnMIkzbIPB)
+
+## Brain-calc game demo
+[![asciicast](https://asciinema.org/a/MinRSKPW2PkHRmN5ocfPNmMGX.png)](https://asciinema.org/a/MinRSKPW2PkHRmN5ocfPNmMGX)
