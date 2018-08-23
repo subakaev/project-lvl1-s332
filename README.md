@@ -17,3 +17,6 @@
 
 ## Brain-balance game demo
 [![asciicast](https://asciinema.org/a/9qsIqbWW2b9QzltZuuoQrnqPj.png)](https://asciinema.org/a/9qsIqbWW2b9QzltZuuoQrnqPj)
+
+## Brain-progression game demo
+[![asciicast](https://asciinema.org/a/BkgRd5y2UDAeXqMW0N1DbhJxA.png)](https://asciinema.org/a/BkgRd5y2UDAeXqMW0N1DbhJxA)
