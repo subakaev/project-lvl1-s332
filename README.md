@@ -14,3 +14,6 @@
 
 ## Brain-gcd game demo
 [![asciicast](https://asciinema.org/a/sNRumEdziQ2OCJ0cqf0wSAfrs.png)](https://asciinema.org/a/sNRumEdziQ2OCJ0cqf0wSAfrs)
+
+## Brain-balance game demo
+[![asciicast](https://asciinema.org/a/9qsIqbWW2b9QzltZuuoQrnqPj.png)](https://asciinema.org/a/9qsIqbWW2b9QzltZuuoQrnqPj)
