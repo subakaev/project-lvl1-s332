@@ -1,7 +1,9 @@
 import { cons } from 'hexlet-pairs';
 
-import { getRandomInt, isEven } from '../utils';
+import { getRandomInt } from '../utils';
 import startGame from '../game-engine';
+
+const isEven = n => n % 2 === 0;
 
 const playStepGenerator = () => {
   const question = getRandomInt();
