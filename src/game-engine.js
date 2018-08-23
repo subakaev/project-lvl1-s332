@@ -38,7 +38,7 @@ export default (description, generateStepFunc) => {
 
   const name = readlineSync.question('\nWhat is your name? ');
 
-  console.log(`Hello, ${name}!`);
+  console.log(`Hello, ${name}!\n`);
 
   const gameResult = playGame(generateStepFunc);
 
