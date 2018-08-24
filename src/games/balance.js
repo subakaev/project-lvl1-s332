@@ -1,6 +1,6 @@
 import { cons } from 'hexlet-pairs';
 
-import { getRandomInt, sortIntArray } from '../utils';
+import getRandomInt from '../utils';
 import startGame from '../game-engine';
 
 const minRandomNum = 10;
@@ -17,10 +17,14 @@ const balanceNumber = (n) => {
       return arr.join('');
     }
 
-    return iter(sortIntArray([min + 1, ...arr.slice(1, arr.length - 1), max - 1]));
+    const nextArr = [min + 1, ...arr.slice(1, arr.length - 1), max - 1].sort();
+
+    return iter(nextArr);
   };
 
-  return iter(sortIntArray(getArrayFromNumber(n)));
+  const initialArr = getArrayFromNumber(n).sort();
+
+  return iter(initialArr);
 };
 
 const playStepGenerator = () => {

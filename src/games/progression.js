@@ -1,17 +1,15 @@
 import { cons } from 'hexlet-pairs';
 
-import { getRandomInt } from '../utils';
+import getRandomInt from '../utils';
 import startGame from '../game-engine';
 
-const progressionNumbersCount = 10;
+const progressionLength = 10;
 const minProgressionStep = 1;
 const maxProgressionStep = 11;
 
-const generateProgression = () => {
-  const step = getRandomInt(minProgressionStep, maxProgressionStep);
-
+const generateProgression = (start, step, length) => {
   const iter = (result, counter) => {
-    if (counter >= progressionNumbersCount) {
+    if (counter >= length) {
       return result;
     }
 
@@ -20,17 +18,21 @@ const generateProgression = () => {
     return iter([...result, next], counter + 1);
   };
 
-  return iter([getRandomInt()], 0);
+  return iter([start], 0);
 };
 
 const generateQuestion = (progression, missingIndex) => progression.reduce((acc, current, index) => `${acc} ${index !== missingIndex ? current : '..'}`, '').trim();
 
 const playStepGenerator = () => {
-  const progression = generateProgression();
+  const step = getRandomInt(minProgressionStep, maxProgressionStep);
+
+  const progression = generateProgression(getRandomInt(), step, progressionLength);
 
   const missingIndex = getRandomInt(0, progression.length);
 
-  return cons(generateQuestion(progression, missingIndex), `${progression[missingIndex]}`);
+  const question = generateQuestion(progression, missingIndex);
+
+  return cons(question, `${progression[missingIndex]}`);
 };
 
 export default () => startGame('What number is missing in this progression?', playStepGenerator);

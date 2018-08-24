@@ -1,6 +1,6 @@
 import { cons } from 'hexlet-pairs';
 
-import { getRandomInt } from '../utils';
+import getRandomInt from '../utils';
 import startGame from '../game-engine';
 
 const playStepGenerator = () => {
